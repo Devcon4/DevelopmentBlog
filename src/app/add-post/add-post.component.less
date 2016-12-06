@@ -1,0 +1,83 @@
+@import '../../styles.less';
+
+i {
+    position: fixed;
+    top: calc(~'100vh - 80px');
+    left: 0px;
+    height: 60px;
+    width: 100px;
+    color: white;
+    font-size: 36px;
+    padding-top: 12px;
+    padding-left: 4px;
+    vertical-align: middle;
+    z-index: 25;
+}
+
+i > p {
+    display: inline-block;
+    font-size: 24px;
+    font-family: Arial;
+    vertical-align: middle;
+    padding-left: 4px;
+}
+
+.main {
+  position: absolute;
+  top: calc(~'100vh - 80px');
+  height: 60px;
+  width: 120px;
+  z-index: 9001;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.back {
+    background-color: @brand-primary;
+    position: fixed;
+    top: calc(~'100vh - 80px');
+    left: 0px;
+    height: 60px;
+    width: 100px;
+    color: white;
+    font-size: 36px;
+    padding-top: 12px;
+    padding-left: 60px;
+}
+
+.inset {
+  background-color: darken(@brand-primary, 20px);
+    position: fixed;
+    top: calc(~'100vh - 70px');
+    left: 0px;
+    height: 40px;
+    width: 118px;
+    color: white;
+    font-size: 36px;
+    padding-top: 12px;
+    z-index: 12;
+}
+
+.triangle {
+    position: fixed;
+    height: 60px;
+    left: 100px;
+    top: calc(~'100vh - 80px');
+    width: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid @brand-primary;
+}
+
+.inset-triangle {
+    position: fixed;
+    height: 40px;
+    left: 118px;
+    top: calc(~'100vh - 70px');
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid darken(@brand-primary, 20%);
+}
