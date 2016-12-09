@@ -8,7 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body id="body" onresize="resizeCanvas()">
   <app-root>Loading...</app-root>
+  <canvas id="MainCanvas"></canvas>
+  <style>
+      #body {
+          overflow: hidden;
+      }
+      #MainCanvas {
+          border: 1px solid #000000;
+          position: absolute;
+          margin: 0;
+          top: 0;
+          left: 0;
+          z-index: -1000;
+      }</style>
+  <script src="./assets/Points.js"></script>
 </body>
 </html>
