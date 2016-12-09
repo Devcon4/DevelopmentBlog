@@ -1,31 +1,8 @@
-# Blog
+# Development Blog
+This is the source for my development blog [Devyn.Cyphers.io](http://devynCyphers.io).
+It uses Angular 2/Firebase and is build using Angular-cli.
+I have used other setups for ng2 projects (one with grunt/systemjs/yo, and another with the old cli/Horizon ) but they were harder to use than this setup. This combination just works.
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
-
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Badges
+I have used TeamCity before but have been wanting to try some 'CI as a Service' options, Mainly Travis Ci and Codeship. I am using Travis CI in another project so This one is done with Codeship.
+https://codeship.com/projects/c1affff0-a003-0134-2b6d-222c9cae711b/status?branch=master
