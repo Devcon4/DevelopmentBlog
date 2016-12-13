@@ -4,3 +4,33 @@
   display: inline-block;
   width: calc(~'100vw -' @sidebar-width);
 }
+
+h4 {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.center {
+  background-color: white;
+  box-shadow: 0px 12px 43px -8px rgba(0,0,0,0.75);
+  width: 25vw;
+  // height: 25vh;
+  margin-left: 50%;
+  margin-top: 50vh;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: @brand-primary;
+  border-color: @brand-primary;
+  float: right;
+
+  &:hover {
+    box-shadow: 0px 0px 25px -3px rgba(0,0,0,0.75);
+    background-color: white;
+    color: @brand-success;
+    border-color: @brand-success;
+  }
+}
