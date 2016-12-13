@@ -3,7 +3,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { appRouterProviders } from './app.route';
 import { AppComponent } from './app.component';
@@ -12,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddPostComponent } from './add-post/add-post.component';
 
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 export const firebaseConfig = {
   apiKey: 'AIzaSyDJN4N_HkUBjlZlR_2DAvesDJIErdNRS8s',
   authDomain: 'developmentblog-bee71.firebaseapp.com',

@@ -17,9 +17,11 @@ describe('AddPostComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddPostComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    // fixture = TestBed.createComponent(AddPostComponent);
+    // component = fixture.componentInstance;
+    let af = jasmine.createSpyObj('af', ['databse']);
+    component = new AddPostComponent(af);
+    // fixture.detectChanges();
   });
 
   it('should create', () => {

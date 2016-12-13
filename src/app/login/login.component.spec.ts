@@ -17,9 +17,11 @@ describe('LoginComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    // fixture = TestBed.createComponent(LoginComponent);
+    // component = fixture.componentInstance;
+    let af = jasmine.createSpyObj('af', ['database']);
+    component = new LoginComponent(af);
+    // fixture.detectChanges();
   });
 
   it('should create', () => {
