@@ -6,3 +6,4 @@ I have used other setups for ng2 projects (one with grunt/systemjs/yo, and anoth
 ## Badges
 I have used TeamCity before but have been wanting to try some 'CI as a Service' options, Mainly Travis Ci and Codeship. I am using Travis CI in another project so This one is done with Codeship.
 https://codeship.com/projects/c1affff0-a003-0134-2b6d-222c9cae711b/status?branch=master
+
