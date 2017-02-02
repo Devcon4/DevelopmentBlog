@@ -1,6 +1,5 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
-
+import { FirebaseService } from '../firebase.service';
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -22,9 +21,9 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class PostListComponent implements OnInit {
   ids = [];
-  posts: FirebaseListObservable<any[]>;
-  constructor(af: AngularFire) {
-    this.posts = af.database.list('posts');
+  posts;
+  constructor(private fb: FirebaseService) {
+    this.posts = this.fb.app.database().ref(`/posts`);
   }
 
   trackFbObjects = (idx, obj) => obj.$key;

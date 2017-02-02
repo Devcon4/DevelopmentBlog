@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire } from 'angularfire2';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,20 +8,19 @@ import { AngularFire } from 'angularfire2';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public af: AngularFire) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
   login() {
-    this.af.database.list('posts').push({ text: 'login attempt'});
     console.log('login!');
-    this.af.auth.login();
+    this.userService.login();
   }
 
   logout() {
     console.log('logout!');
-    this.af.auth.logout();
+    this.userService.logout();
   }
 
 }
