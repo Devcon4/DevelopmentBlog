@@ -1,6 +1,14 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
+    ".read": false,
+    ".write": false,
+    "posts": {
+      ".read" : true,
+      ".write": "root.child('roles').child('admins').hasChild(auth.uid)"
+    },
+    "roles": {
+      ".read": "root.child('roles').child('admins').hasChild(auth.uid)",
+      ".write": "root.child('roles').child('admins').hasChild(auth.uid)"
+    }
   }
 }
