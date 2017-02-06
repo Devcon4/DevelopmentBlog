@@ -44,7 +44,7 @@ var pointColor = "#000000";
 var planesActive = false;
 var linesActive = true;
 var pointsActive = true;
-var lineDistance = 250; // keep less than 250-ish for framerate.
+var lineDistance = 150; // keep less than 250-ish for framerate.
 var ObjectCount = 100; // keep less than 150-ish for framerate.
 
 var c = document.getElementById(canvasName);

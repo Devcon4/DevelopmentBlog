@@ -1,0 +1,5 @@
+<div class="row" ngFor="let field of post?.fields">
+  <div [ngSwitch]="field.type">
+    <div *ngSwitchCase="'Title'"><h2>field.value</h2></div>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddPostComponent } from './add-post/add-post.component';
 
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { PostComponent } from './post/post.component';
 export const firebaseConfig = {
   apiKey: 'AIzaSyDJN4N_HkUBjlZlR_2DAvesDJIErdNRS8s',
   authDomain: 'developmentblog-bee71.firebaseapp.com',
@@ -30,7 +31,8 @@ export const myFirebaseAuthConfig = {
     PostListComponent,
     LoginComponent,
     SidebarComponent,
-    AddPostComponent
+    AddPostComponent,
+    PostComponent
   ],
   imports: [
     appRouterProviders,
