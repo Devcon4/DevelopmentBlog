@@ -15,9 +15,9 @@ export class UserService {
       }
     });
   }
-
+  
   login() {
-    this.fb.app.auth().signInWithPopup(this.fb.provider);
+    this.fb.app.auth().signInWithRedirect(this.fb.provider);
   }
 
   logout() {
