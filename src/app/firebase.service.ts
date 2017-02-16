@@ -17,5 +17,6 @@ export class FirebaseService {
   constructor() {
     this.app = firebase.initializeApp(this.firebaseConfig);
     this.provider = new firebase.auth.GoogleAuthProvider();
+    
   }
 }

@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
 import { FirebaseService } from './firebase.service';
+import * as firebase from 'firebase';
 
 @Injectable()
 export class UserService {
   user;
   roles;
-  constructor(private fb: FirebaseService) {
-    fb.app.auth().onAuthStateChanged(u => {
-      if (u) {
-        (<any>window).user = u;
-        console.log('athenticated!');
-        this.user = u;
-        fb.app.database().ref(`/roles/${u.uid}`).on('value', snap => this.roles = snap.val());
-      }
-    });
+
+  constructor(private fb: FirebaseService) { }
+
+  signIn(user) {
+    console.log('athenticated!');
+    if (user) {
+      (<any>window).user = user;
+      this.user = user;
+      this.fb.app.database().ref(`/roles/${user.uid}`).on('value', snap => this.roles = snap.val());
+    }
   }
-  
+
   login() {
-    this.fb.app.auth().signInWithRedirect(this.fb.provider);
+    console.log(this.fb.app);
+    console.log(this.fb.provider);
+    firebase.auth(this.fb.app).signInWithRedirect(this.fb.provider).then(this.signIn.bind(this)).catch(e => { console.log('err!'); console.log(e)});
   }
 
   logout() {
