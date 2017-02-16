@@ -8,7 +8,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AdminGuard } from './admin-guard.service';
 import { UserService } from './user.service';
 import { FirebaseService } from './firebase.service';
-
+import { PostComponent } from './post/post.component';
 import { appRouterProviders } from './app.route';
 import { AppComponent } from './app.component';
 import { PostListComponent } from './post-list/post-list.component';
@@ -39,7 +39,8 @@ import { UserListComponent } from './user-list/user-list.component';
     SidebarComponent,
     AddPostComponent,
     AdminComponent,
-    UserListComponent
+    UserListComponent,
+    PostComponent
   ],
   imports: [
     appRouterProviders,

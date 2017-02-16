@@ -7,8 +7,8 @@ describe('blog App', function() {
     page = new BlogPage();
   });
 
-  it('should run e2e tests', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(true).toEqual(true);
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

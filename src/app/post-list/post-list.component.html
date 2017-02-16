@@ -1,4 +1,6 @@
 <div class="main">
-  <div class="post" *ngFor="let post of posts | async"><h3>Post</h3> {{post?.text}}</div>
+  <div class="post" *ngFor="let post of posts | async">
+    <!--<post [currentPost]="post"></post>-->
+  </div>
 </div>
 <app-add-post></app-add-post>
