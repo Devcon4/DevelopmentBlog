@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AuthGuard } from './auth-guard.service';
-import { AdminGuard } from './admin-guard.service';
+import { AdminGuardService } from './admin-guard.service';
 import { UserService } from './user.service';
 import { FirebaseService } from './firebase.service';
 import { PostComponent } from './post/post.component';
@@ -19,6 +19,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 // import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { AdminComponent } from './admin/admin.component';
 import { UserListComponent } from './user-list/user-list.component';
+
 // export const firebaseConfig = {
 //   apiKey: 'AIzaSyDJN4N_HkUBjlZlR_2DAvesDJIErdNRS8s',
 //   authDomain: 'developmentblog-bee71.firebaseapp.com',
@@ -51,9 +52,9 @@ import { UserListComponent } from './user-list/user-list.component';
   ],
   providers: [
     AuthGuard,
-    AdminGuard,
+    AdminGuardService,
     UserService,
-    FirebaseService,
+    { provide: FirebaseService, useClass: FirebaseService },
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
